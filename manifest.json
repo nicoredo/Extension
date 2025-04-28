@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Evaluador Clínico",
+    "version": "3.0",
+    "description": "Evalúa pacientes para estudios según HCE",
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["<all_urls>"],
+    "background": { "service_worker": "background.js" },
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Evaluador Clínico"
+    },
+    "web_accessible_resources": [
+      {
+      "resources": ["terminologia_medica.json", "criterios_estudios.json","tooltips.json"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
